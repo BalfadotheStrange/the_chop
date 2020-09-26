@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>landlord webs</title>
+  <link rel='stylesheet' href="static/style.css">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+	<div class='center'>
+		<h1 class='text'>Landlords hate this 1 weird trick</h1>
+	</div>
+	<div class='center'>
+			<form action="submit_form" method="post" class="reveal-content">
+				<span class='text'>Enter Building Number --</span>
+			<input type="text" name="num" size="20"><br>
+				<select name="nsew">
+				<option value="">Select Direction
+				</option><option value="N">North
+				</option><option value="S">South
+				</option><option value="E">East
+				</option><option value="W">West
+				</option></select><br>
+					<span class='text'>Enter Street Name --</span>
+					<input type="text" name="street_name" size="20"><br>
+						<select name="street_type">
+						<option value="">Select Type
+						</option><option value="ST">St
+						</option><option value="AVE">Ave
+						</option><option value="PKWY">Pkwy
+						</option><option value="BLVD">Blvd
+						</option><option value="CT">Ct
+						</option><option value="PL">Pl
+						</option><option value="RD">Rd
+						</option><option value="CIR">Cir
+						</option><option value="DR">Dr
+						</option><option value="WAY">Way
+						</option><option value="LN">Ln
+						</option><option value="HWY">Hwy
+						</option></select><br>
+							<input type="submit" value="SUBMIT >>" title="Submit" id="submit1" name="submit1">
+							
+			</form>
+	</div>
+	<div class='center'>
+				<h2>About
+				</h2>
+				
+				<span>
+				The database used by this site is publicly available <a href="https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-real-property-apartment-and-commercial-characteristics">here</a>.
+				<br> This site only uses the city of Denver's database.
+				<br> The server uses the address entered above to locate the registered owner
+				 and the address the owner uses as a tax base for the building. It then uses
+				 that tax address to discover all other buildings registered to the same address.
+				 Then it shows that information in a list and on an interactive map.
+				 
+				 <br>Credit to the Chicago DSA for the idea. Their much better site can be found <a href="https://findmylandlord.chicagodsa.org/">here</a>.
+
+				 </span>
+	
+	</div>
+	
+	
+
+
+</body>
+</html>
